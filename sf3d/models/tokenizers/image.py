@@ -23,7 +23,7 @@ class DINOV2SingleImageTokenizer(BaseModule):
     cfg: Config
 
     def configure(self) -> None:
-        self.model = Dinov2Model.from_pretrained(self.cfg.pretrained_model_name_or_path)
+        self.model = Dinov2Model.from_pretrained("C:/SF3D/dinov2-large/models--facebook--dinov2-large/snapshots/47b73eefe95e8d44ec3623f8890bd894b6ea2d6c", local_files_only=True)
 
         for p in self.model.parameters():
             p.requires_grad_(False)
