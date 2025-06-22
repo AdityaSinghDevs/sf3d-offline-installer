@@ -78,8 +78,8 @@ if __name__ == "__main__":
 
     model = SF3D.from_pretrained(
         args.pretrained_model,
-        config_name="config.yaml",
         weight_name="model.safetensors",
+        config_name="config.yaml",
     )
     model.to(device)
     model.eval()
